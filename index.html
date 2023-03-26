@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Alejandro's Portfolio Website</title>
+        <script src="https://kit.fontawesome.com/fd6bfeb8be.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/logo.png" class="logo">
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text">
+                    <p>Computer Science Undergraduate</p>
+                    <h1>Hi, I'm <span>Alejandro Castillo</span><br> from Los Angeles, California</h1>
+                </div>
+            </div>
+        </div>
+
+<!----------Portfolio---------->
+
+        <div id="portfolio">
+            <div class="container">
+                <h2 class="subtitle">Projects</h2>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/NULL.jpg">
+                        <div class="layer">
+                            <h3>Project 1</h3>
+                            <p>To Do</p>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/NULL.jpg">
+                        <div class="layer">
+                            <h3>Project 2</h3>
+                            <p>To Do</p>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/NULL.jpg">
+                        <div class="layer">
+                            <h3>Project 3</h3>
+                            <p>To Do</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-----------about--------->
+
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/about.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h2 class="subtitle">About Me</h2>
+                        <p>Hello! My name is Alejandro and I enjoy solving puzzles. My interest in computer science began back in 2008 when I was first introduced to the computer. In an attempt to download mods for minecraft, I ended up getting a virus which led me to question how those viruses are even created?<br><br>Fast forward to today and i'm now in my junior year of college studying computer science with an intent of work in the cyber security field. I originally attended the University of California, Riverside for my first two years, but after some consideration and a talk with the head chair of computer science at CSUN, I joined the Matador family.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <!---Skills--->
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li>C++</li>
+                                <li>Html</li>
+                                <li>CSS</li>
+                                <li>Java</li>
+                            </ul>
+                        </div>
+                        <!---Education--->
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>University of California, Riverside</span><br>2021-2023</li>
+                                <li><span>California State University, Northridge</span><br>2023-Present</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!---------Contact------->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="subtitle">Contact Me</h1>
+                        <p><i class="fa-sharp fa-solid fa-envelope"></i> alejandro.cast121@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i> 818-571-5897</p>
+                        <a href="/images/Resume.pdf" download class="btn">Download Resume</a>
+                    </div>
+                    <div class="contact-right">
+                        <div class="social-icons">
+                            <a href="https://github.com/acast12"><i class="fa-brands fa-github"></i> - Github</a>
+                            <br>
+                            <a href="https://www.linkedin.com/in/alejandro-castillo-77287b1b5/"><i class="fa-brands fa-linkedin"></i> - LinkedIn</a>
+                            <br>
+                            <a href="https://leetcode.com/acast12/"><i class="fa-solid fa-code"></i> - LeetCode</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname) {
+                for(tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+
+        </script>
+
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+
+            function openmenu() {
+                sidemenu.style.right = "0";
+            }
+            function closemenu() {
+                sidemenu.style.right = "-200px";
+            }
+        </script>
+        
+    </body>
+
+</html>
